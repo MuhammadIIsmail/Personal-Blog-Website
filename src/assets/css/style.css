@@ -1,0 +1,206 @@
+@import "style_home.css";
+@import "style_post.css";
+@import "style_image.css";
+
+.container {
+  display: grid;
+  height: max-content;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 150px 600px 140px;
+  grid-template-areas: 
+  "hd1 hd1 hd3 hd3 hd3 hd3 hd7 hd8 hd9"
+  "sd sd main main main main main main main"
+  "ft ft ft ft ft ft ft7 ft8 ft9";
+  grid-auto-rows: minmax(100px, auto);
+  border: 2px;
+  justify-content: flex-start;
+  margin: auto;
+  position: relative;
+}
+
+#nestedGrid {
+  display: grid;
+  grid-template-columns: 110px 110px;
+  grid-template-rows: 300px 300px;
+  border: 2px solid #ccc;
+  width: 20%;
+}
+.photoBox {
+  display: grid;
+  width: auto;
+  height: 150px;
+  border: 1px solid #ccc;
+  background: white;
+}
+.image_main {
+  grid-area: main;
+  opacity: 0.2;
+  /*background-image: url('images/docking.webp');*/
+  /*background-image: url('https://placebear.com/2025/150');  */      
+  /*background-size: cover;
+  background-repeat: no-repeat;*/
+  width: 100%;
+  height: auto;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid green;
+  padding: 15px;
+}
+#four {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  border: 1px; /*solid red;*/
+  padding: 15px;
+}
+.card img {
+  width: 100%;
+}
+.sideheader {
+  grid-area: hd1;
+}
+.header {
+  grid-area: hd3;
+}
+#nav {
+  grid-area: hd9;
+}
+
+.sidebar {
+  grid-area: sd;
+  align-items: center;
+}
+.content {
+  grid-area: main;
+  font-size: large;
+  font-family: sans-serif;        
+}
+.footer {
+  grid-area: ft;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px;/* solid red;*/
+  padding: 15px;
+}
+
+/*.content .overlay {
+  position: absolute;
+  /*top: 80px;
+  right: 15px;
+  font-weight: bold;
+  /*text-align: right;
+  font-size: 30px;
+}*/
+
+@media screen and (max-width: 600px) {
+  .container {
+    display: inline-block;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px 600px 40px;
+    /* grid-template-areas: 
+    "hd1"
+    "hd3"
+    "hd9"
+    "main"
+    "ft"
+    "ft7"
+    "ft8"
+    "ft9"; */
+    border: 2px solid rgb(170, 35, 35);
+    grid-auto-rows: minmax(100px, auto);
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    flex-wrap: wrap;
+  }
+
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid green;
+    padding: 15px;
+    font-size: medium;
+  }
+  .row {
+    display: inline-block;
+  }
+  .sideheader {
+    font-size: medium;
+  }
+  .nav1 {
+    font-size: medium;
+  }
+  .nav2 {
+    font-size: medium;
+  }
+  .nav3 {
+    font-size: large;
+  }
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    height: auto;
+  }
+  .content #four {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    /* height: 100%; */
+  }
+  .overlay {
+    flex-grow: 1;
+  }
+  .row {margin: 0 -5px;}
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@media(min-width: 600px) and (max-width: 1100px) {
+  .container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px 600px 40px;
+    grid-template-areas: 
+    "hd1 hd1 hd3 hd3 hd3 hd3 hd3 hd3 hd3 hd9 hd9 hd9"
+    "sd sd main main main main main main main main main main"
+    "ft ft ft ft ft ft ft ft ft ft7 ft8 ft9";
+    border: 2px solid rgb(170, 35, 35);
+    grid-auto-rows: minmax(100px, auto);
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+  }
+}
+@media(min-width: 1101px) {
+  .container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px 600px 40px;
+    grid-template-areas: 
+    "hd1 hd1 hd3 hd3 hd3 hd3 hd3 hd3 hd3 hd9 hd9 hd9"
+    "sd sd main main main main main main main main main main"
+    "ft ft ft ft ft ft ft ft ft ft7 ft8 ft9";
+    border: 2px solid white;
+    grid-auto-rows: minmax(100px, auto);
+    justify-content: center;
+    margin: auto;
+  }
+}
+

@@ -1,0 +1,51 @@
+.image_main {
+  grid-area: main;
+  opacity: 1;
+  /* background-image: url('images/docking.webp'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+}
+
+.content .overlay {
+  position: absolute;
+  /*top: 80px;
+  right: 15px;
+  font-weight: bold;
+  text-align: right;
+  font-size: 30px;*/
+}
+.github {
+  grid-area: ft7;
+  opacity: 0.2;
+  /*background-image: url('images/github.png');*/
+  background-image: url('https://placebear.com/160/50');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.github:hover {
+  opacity: 1.0;
+}
+.linkedin {
+  grid-area: ft8;
+  opacity: 0.2;
+  /*background-image: url('images/linkedin.jpg');*/
+  background-image: url('https://placebear.com/160/50');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.linkedin:hover {
+  opacity: 1.0;
+}
+.orcid {
+  grid-area: ft9;
+  opacity: 0.2;
+  /*background-image: url('images/orcid.jpg');*/
+  background-image: url('https://placebear.com/160/50');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.orcid:hover {
+  opacity: 1.0;
+}

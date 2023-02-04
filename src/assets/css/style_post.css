@@ -1,0 +1,205 @@
+@import "style_image.css";
+body {
+  background-color: #ccc;
+  color: black;
+  font-size: medium;
+}
+.container {
+  display: grid;
+  height: max-content;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 150px 600px 40px;
+  grid-template-areas: 
+  "hd1 hd1 hd3 hd3 hd3 hd3 hd7 hd8 hd9"
+  "sd sd main main main main main main main"
+  "ft ft ft ft ft ft ft7 ft8 ft9";
+  grid-auto-rows: minmax(100px, auto);
+  border: 2px;
+  justify-content: flex-start;
+  margin: auto;
+  position: relative;
+}
+#nav {
+  display: grid;
+  grid-template-columns: auto ;
+  grid-template-rows: auto;
+  border: 2px solid red;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  color: rgb(209, 127, 19);
+  
+}
+/* bar {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid green;
+  padding: 15px;
+} */
+/* Styling navigation bar for post*/
+
+.nav1 {
+  display: grid;
+  width: auto;
+  height: auto;
+  border: 1px solid salmon;
+  background: yellow;
+  grid-column: 1;
+  grid-row: 1;
+  align-items: center;
+  justify-content: center;
+}
+.nav2 {
+  display: grid;
+  width: auto;
+  height: auto;
+  border: 1px solid salmon;
+  background: yellow;
+  grid-column: 2;
+  grid-row: 1;
+  align-items: center;
+  justify-content: center;
+}
+.nav3 {
+  display: grid;
+  width: auto;
+  height: auto;
+  border: 1px solid salmon;
+  background: yellow;
+  grid-column: 3;
+  grid-row: 1;
+  align-items: center;
+  justify-content: center;
+}
+/*=======================================*/
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid green;
+  padding: 15px;
+}
+#four {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: 1px; /*solid red;*/
+  padding: 15px;
+}
+.sideheader {
+  grid-area: hd1;
+  font-size: 10px;
+}
+.header {
+  grid-area: hd3;
+}
+#nav {
+  grid-area: hd9;
+}
+.sidebar {
+  grid-area: sd;
+  align-items: center;
+}
+.content {
+  grid-area: main;
+  font-size: large;
+  font-family: sans-serif;   
+  color: white;     
+}
+.footer {
+  grid-area: ft;
+}
+.f7 {
+  grid-area: ft7;
+}
+.f8 {    
+  grid-area: ft8;
+}
+.f9 {
+  grid-area: ft9;
+  
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px;/* solid red;*/
+  padding: 15px;
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px 600px 40px;
+    grid-template-areas: 
+    "hd1 hd1 hd3 hd3 hd3 hd3 hd3 hd3 hd3 hd9 hd9 hd9"
+    "sd sd main main main main main main main main main main"
+    "ft ft ft ft ft ft ft ft ft ft7 ft8 ft9";
+    border: 2px solid rgb(170, 35, 35);
+    /* grid-auto-rows: minmax(100px, auto); */
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    height: auto;
+  }
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid green;
+    padding: 15px;
+    font-size: 10px;
+  }
+  .sideheader {
+    font-size: 8px;
+  }
+  .nav1 {
+    font-size: 10px;
+  }
+  .nav2 {
+    font-size: 10px;
+  }
+  .nav3 {
+    font-size: 10px;
+  }
+}
+@media(min-width: 600px) and (max-width: 1100px) {
+  .container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px 600px 40px;
+    grid-template-areas: 
+    "hd1 hd1 hd3 hd3 hd3 hd3 hd3 hd3 hd3 hd9 hd9 hd9"
+    "sd sd main main main main main main main main main main"
+    "ft ft ft ft ft ft ft ft ft ft7 ft8 ft9";
+    border: 2px solid rgb(170, 35, 35);
+    grid-auto-rows: minmax(100px, auto);
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    height: auto;
+  }
+}
+@media(min-width: 1101px) {
+  .container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px 600px 40px;
+    grid-template-areas: 
+    "hd1 hd1 hd3 hd3 hd3 hd3 hd3 hd3 hd3 hd9 hd9 hd9"
+    "sd sd main main main main main main main main main main"
+    "ft ft ft ft ft ft ft ft ft ft7 ft8 ft9";
+    border: 2px solid white;
+    grid-auto-rows: minmax(100px, auto);
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    height: auto;
+  }
+}
+
